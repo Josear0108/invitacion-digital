@@ -25,18 +25,18 @@ jobs:
 
       - name: Install dependencies
         run: |
-          cd patitas-unidas.client
+          cd tarjeta-digital-lauraSofia.client
           npm ci
 
       - name: Build project
         run: |
-          cd patitas-unidas.client
+          cd tarjeta-digital-lauraSofia.client
           npm run build
 
       - name: Deploy to GitHub Pages
         uses: peaceiris/actions-gh-pages@v3
         with:
           github_token: ${{ secrets.GITHUB_TOKEN }}
-          publish_dir: ./patitas-unidas.client/dist
+          publish_dir: ./tarjeta-digital-lauraSofia/dist
 
           
