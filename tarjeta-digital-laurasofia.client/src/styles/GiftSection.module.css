@@ -1,0 +1,41 @@
+.giftSectionContainer {
+  margin-bottom: var(--spacing-16);
+}
+
+.giftSection {
+  text-align: center;
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.giftIcon {
+  width: 2.5rem;
+  height: 2.5rem;
+  color: var(--color-emerald-600);
+  margin: 0 auto var(--spacing-4);
+}
+
+.giftIcon svg {
+  width: 100%;
+  height: 100%;
+}
+
+.giftSection h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 300;
+  color: var(--color-emerald-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.giftMessage {
+  color: var(--color-emerald-700);
+  margin-bottom: var(--spacing-4);
+}
+
+.giftOption {
+  color: var(--color-emerald-600);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+}

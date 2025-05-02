@@ -1,0 +1,51 @@
+.parallaxBackground {
+  position: fixed;
+  inset: 0;
+  z-index: 0;
+  overflow: hidden;
+  pointer-events: none;
+}
+
+.gradientBackground {
+  position: absolute;
+  inset: 0;
+  background: linear-gradient(to bottom, var(--color-emerald-50), var(--color-emerald-100), var(--color-white));
+  transition: opacity var(--transition-normal) var(--transition-timing);
+}
+
+.star {
+  position: absolute;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-emerald-300);
+  opacity: 0.2;
+  animation: pulse 3s infinite ease-in-out;
+}
+
+.decorativeShape {
+  position: absolute;
+  border-radius: var(--border-radius-full);
+  filter: blur(24px);
+  transition: transform var(--transition-normal) var(--transition-timing);
+}
+
+.shape1 {
+  bottom: -5rem;
+  left: -5rem;
+  width: 16rem;
+  height: 16rem;
+  background-color: rgba(16, 185, 129, 0.3);
+}
+
+.shape2 {
+  top: -5rem;
+  right: -5rem;
+  width: 18rem;
+  height: 18rem;
+  background-color: rgba(16, 185, 129, 0.2);
+}
+
+@media (max-width: 768px) {
+  .decorativeShape {
+    transform: none !important;
+  }
+}

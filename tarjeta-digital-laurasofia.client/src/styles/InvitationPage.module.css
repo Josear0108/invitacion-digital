@@ -1,0 +1,7 @@
+.invitationPage {
+  min-height: 100vh;
+  background-color: var(--color-white);
+  color: var(--color-emerald-700);
+  overflow-x: hidden;
+  position: relative;
+}

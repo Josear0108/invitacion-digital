@@ -1,0 +1,10 @@
+{
+"SpaProxyServer": {
+"ServerUrl": "https://localhost:57201",
+"RedirectUrl": "",
+"LaunchCommand": "npm run dev",
+"WorkingDirectory": "C:\\Users\\Jose Arguello\\Desktop\\Cursos\\tarjeta-digital-lauraSofia\\tarjeta-digital-lauraSofia.Server\\..\\tarjeta-digital-laurasofia.client",
+"MaxTimeoutInSeconds": "120",
+"KeepRunning": "false"
+}
+}

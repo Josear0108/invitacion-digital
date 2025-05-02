@@ -1,0 +1,28 @@
+.dressCodeContainer {
+  margin-bottom: var(--spacing-16);
+}
+
+.dressCode {
+  text-align: center;
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.dressCode h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 300;
+  color: var(--color-emerald-600);
+  margin-bottom: var(--spacing-4);
+}
+
+.dressCodeMain {
+  color: var(--color-emerald-700);
+  margin-bottom: var(--spacing-2);
+}
+
+.dressCodeReserved {
+  color: var(--color-emerald-600);
+  font-weight: 500;
+}

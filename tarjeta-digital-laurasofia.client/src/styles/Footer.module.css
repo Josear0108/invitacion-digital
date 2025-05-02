@@ -1,0 +1,16 @@
+.footer {
+  text-align: center;
+  color: var(--color-emerald-600);
+  margin-top: var(--spacing-12);
+}
+
+.footerMain {
+  font-size: var(--font-size-xl);
+  margin-bottom: var(--spacing-2);
+}
+
+.footerSub {
+  margin-top: var(--spacing-4);
+  font-size: var(--font-size-sm);
+  color: var(--color-emerald-500);
+}

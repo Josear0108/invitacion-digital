@@ -1,0 +1,115 @@
+.tabsContainer {
+  margin-bottom: var(--spacing-16);
+}
+
+.tabs {
+  width: 100%;
+}
+
+.tabsHeader {
+  display: grid;
+  grid-template-columns: repeat(2, 1fr);
+  border-radius: var(--border-radius-lg);
+  overflow: hidden;
+}
+
+.tabButton {
+  padding: var(--spacing-3) var(--spacing-4);
+  background-color: var(--color-gray-100);
+  border: none;
+  font-size: var(--font-size-base);
+  font-weight: 500;
+  color: var(--color-gray-600);
+  cursor: pointer;
+  transition: background-color var(--transition-normal) var(--transition-timing), color var(--transition-normal)
+    var(--transition-timing);
+}
+
+.tabButton:hover {
+  background-color: var(--color-gray-200);
+}
+
+.activeTab {
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+}
+
+.tabContent {
+  margin-top: var(--spacing-6);
+  background-color: var(--color-white);
+  padding: var(--spacing-6);
+  border-radius: var(--border-radius-lg);
+  box-shadow: var(--shadow-sm);
+}
+
+.itineraryTab h3,
+.directionsTab h3 {
+  font-size: var(--font-size-2xl);
+  font-weight: 300;
+  color: var(--color-emerald-600);
+  margin-bottom: var(--spacing-6);
+  text-align: center;
+}
+
+.directionsContent {
+  margin-bottom: var(--spacing-6);
+}
+
+.directionsContent h4 {
+  font-size: var(--font-size-lg);
+  font-weight: 500;
+  margin-bottom: var(--spacing-2);
+  display: flex;
+  align-items: center;
+}
+
+.directionsIcon {
+  width: 1.25rem;
+  height: 1.25rem;
+  margin-right: var(--spacing-2);
+}
+
+.directionsList {
+  list-style-type: disc;
+  padding-left: var(--spacing-6);
+  margin-bottom: var(--spacing-6);
+}
+
+.directionsList li {
+  margin-bottom: var(--spacing-2);
+  color: var(--color-emerald-700);
+}
+
+.mapPlaceholder {
+  height: 200px;
+  width: 100%;
+  background-color: var(--color-gray-100);
+  border-radius: var(--border-radius-md);
+  overflow: hidden;
+  position: relative;
+  margin-bottom: var(--spacing-4);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.mapPlaceholder p {
+  color: var(--color-gray-500);
+}
+
+.viewMapButton {
+  display: block;
+  margin: 0 auto;
+  padding: var(--spacing-2) var(--spacing-4);
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+  border: none;
+  border-radius: var(--border-radius-md);
+  font-weight: 500;
+  cursor: pointer;
+  transition: background-color var(--transition-normal) var(--transition-timing);
+}
+
+.viewMapButton:hover {
+  background-color: var(--color-emerald-700);
+}

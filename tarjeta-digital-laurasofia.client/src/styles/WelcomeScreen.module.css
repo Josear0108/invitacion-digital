@@ -1,0 +1,90 @@
+.welcomeScreen {
+  position: fixed;
+  inset: 0;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  background-color: var(--color-white);
+  z-index: 50;
+  animation: fadeIn var(--transition-slow) ease-in-out;
+}
+
+.title {
+  font-size: var(--font-size-4xl);
+  color: var(--color-emerald-600);
+  margin-bottom: var(--spacing-16);
+  font-weight: 300;
+  animation: slideUp var(--transition-normal) ease-out 0.5s both;
+}
+
+.playButtonContainer {
+  position: relative;
+  animation: slideUp var(--transition-normal) ease-out 1s both;
+}
+
+.playButtonGlow {
+  position: absolute;
+  inset: 0;
+  background-color: var(--color-emerald-500);
+  border-radius: var(--border-radius-full);
+  opacity: 0.2;
+  animation: pulse 2s infinite ease-in-out;
+}
+
+.playButton {
+  position: relative;
+  z-index: 10;
+  width: 6rem;
+  height: 6rem;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: var(--border-radius-full);
+  background-color: var(--color-emerald-600);
+  color: var(--color-white);
+  border: none;
+  cursor: pointer;
+  transition: background-color var(--transition-normal) var(--transition-timing);
+}
+
+.playButton:hover {
+  background-color: var(--color-emerald-700);
+}
+
+.playIcon {
+  width: 3rem;
+  height: 3rem;
+  margin-left: 0.5rem;
+}
+
+.name {
+  font-size: var(--font-size-7xl);
+  font-weight: 300;
+  color: var(--color-emerald-600);
+  margin-top: var(--spacing-16);
+  margin-bottom: var(--spacing-4);
+  animation: fadeIn var(--transition-normal) ease-out 1.5s both;
+}
+
+.subtitle {
+  font-size: var(--font-size-4xl);
+  font-weight: 300;
+  color: var(--color-emerald-500);
+  margin-bottom: var(--spacing-8);
+  animation: fadeIn var(--transition-normal) ease-out 2s both;
+}
+
+@media (max-width: 768px) {
+  .title {
+    font-size: var(--font-size-3xl);
+  }
+
+  .name {
+    font-size: var(--font-size-5xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-2xl);
+  }
+}

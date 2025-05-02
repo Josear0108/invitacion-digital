@@ -1,0 +1,79 @@
+.heroSection {
+  position: relative;
+  height: 100vh;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  overflow: hidden;
+}
+
+.titleContainer {
+  z-index: 10;
+  text-align: center;
+}
+
+.title {
+  font-size: var(--font-size-6xl);
+  font-weight: 300;
+  color: var(--color-emerald-600);
+  margin-bottom: var(--spacing-4);
+  animation: fadeIn var(--transition-normal) ease-out both;
+}
+
+.subtitleContainer {
+  z-index: 10;
+  text-align: center;
+}
+
+.subtitle {
+  font-size: var(--font-size-3xl);
+  font-weight: 300;
+  color: var(--color-emerald-500);
+  animation: fadeIn var(--transition-normal) ease-out 0.2s both;
+}
+
+.introContainer {
+  z-index: 10;
+  margin-top: var(--spacing-8);
+  text-align: center;
+  max-width: 32rem;
+  padding: 0 var(--spacing-4);
+}
+
+.intro {
+  font-size: var(--font-size-lg);
+  color: var(--color-emerald-700);
+  font-style: italic;
+  line-height: 1.7;
+  animation: fadeIn var(--transition-normal) ease-out 0.4s both;
+}
+
+.scrollIndicator {
+  position: absolute;
+  bottom: var(--spacing-10);
+  left: 50%;
+  transform: translateX(-50%);
+  cursor: pointer;
+  animation: float 2s infinite ease-in-out;
+}
+
+.scrollIndicator svg {
+  width: 2rem;
+  height: 2rem;
+  color: var(--color-emerald-600);
+}
+
+@media (min-width: 768px) {
+  .title {
+    font-size: var(--font-size-8xl);
+  }
+
+  .subtitle {
+    font-size: var(--font-size-4xl);
+  }
+
+  .intro {
+    font-size: var(--font-size-xl);
+  }
+}

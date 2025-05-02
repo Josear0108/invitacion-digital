@@ -1,0 +1,37 @@
+{
+  "Version": 1,
+  "WorkspaceRootPath": "C:\\Users\\Jose Arguello\\Desktop\\Cursos\\tarjeta-digital-lauraSofia\\",
+  "Documents": [
+    {
+      "AbsoluteMoniker": "D:0:0:{56BEEB52-2A89-4F35-8F8E-387A812213A2}|tarjeta-digital-laurasofia.client\\tarjeta-digital-laurasofia.client.esproj|c:\\users\\jose arguello\\desktop\\cursos\\tarjeta-digital-laurasofia\\tarjeta-digital-laurasofia.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}",
+      "RelativeMoniker": "D:0:0:{56BEEB52-2A89-4F35-8F8E-387A812213A2}|tarjeta-digital-laurasofia.client\\tarjeta-digital-laurasofia.client.esproj|solutionrelative:tarjeta-digital-laurasofia.client\\vite.config.ts||{0F2454B1-A556-402D-A7D0-1FDE7F99DEE0}"
+    }
+  ],
+  "DocumentGroupContainers": [
+    {
+      "Orientation": 0,
+      "VerticalTabListWidth": 256,
+      "DocumentGroups": [
+        {
+          "DockedWidth": 200,
+          "SelectedChildIndex": 0,
+          "Children": [
+            {
+              "$type": "Document",
+              "DocumentIndex": 0,
+              "Title": "vite.config.ts",
+              "DocumentMoniker": "C:\\Users\\Jose Arguello\\Desktop\\Cursos\\tarjeta-digital-lauraSofia\\tarjeta-digital-laurasofia.client\\vite.config.ts",
+              "RelativeDocumentMoniker": "tarjeta-digital-laurasofia.client\\vite.config.ts",
+              "ToolTip": "C:\\Users\\Jose Arguello\\Desktop\\Cursos\\tarjeta-digital-lauraSofia\\tarjeta-digital-laurasofia.client\\vite.config.ts",
+              "RelativeToolTip": "tarjeta-digital-laurasofia.client\\vite.config.ts",
+              "ViewState": "AgIAAAYAAAAAAAAAAAAAACYAAAAAAAAAAAAAAA==",
+              "Icon": "ae27a6b0-e345-4288-96df-5eaf394ee369.003213|",
+              "WhenOpened": "2025-05-02T23:32:07.527Z",
+              "EditorCaption": ""
+            }
+          ]
+        }
+      ]
+    }
+  ]
+}

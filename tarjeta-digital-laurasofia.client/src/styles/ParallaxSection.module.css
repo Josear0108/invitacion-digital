@@ -1,0 +1,15 @@
+.parallaxSection {
+  transition: transform var(--transition-normal) var(--transition-timing);
+}
+
+@media (max-width: 768px) {
+  .parallaxSection {
+    transform: none !important;
+  }
+}
+
+@media (hover: none) {
+  .parallaxSection {
+    transform: none !important;
+  }
+}
