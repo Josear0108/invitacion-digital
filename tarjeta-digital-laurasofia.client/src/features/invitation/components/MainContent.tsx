@@ -65,3 +65,4 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
 }
 
 export default MainContent
+  
