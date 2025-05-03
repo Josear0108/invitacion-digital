@@ -30,7 +30,7 @@ const FloralAnimation: React.FC<FloralAnimationProps> = ({ count = 20 }) => {
       x: Math.random() * 100,
       y: Math.random() * 100,
       rotation: Math.random() * 360,
-      scale: Math.random() * 0.3 + 0.2, // Flores más pequeñas para no sobrecargar visualmente
+      scale: Math.random() * 0.9 + 0.2, // Flores más pequeñas para no sobrecargar visualmente
       delay: Math.random() * 2,
       duration: Math.random() * 5 + 5,
       type: Math.floor(Math.random() * 5),
