@@ -33,7 +33,7 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
       <MusicControl />
 
       {/* Menos flores en el contenido principal para no distraer */}
-      <FloralAnimation count={10} />
+      <FloralAnimation count={30} />
 
       <HeroSection />
 

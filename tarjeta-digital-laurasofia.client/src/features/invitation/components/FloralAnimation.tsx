@@ -20,7 +20,7 @@ interface FloralAnimationProps {
   count?: number
 }
 
-const FloralAnimation: React.FC<FloralAnimationProps> = ({ count = 20 }) => {
+const FloralAnimation: React.FC<FloralAnimationProps> = ({ count = 30 }) => {
   const [flowers, setFlowers] = useState<Flower[]>([])
 
   useEffect(() => {
@@ -32,7 +32,7 @@ const FloralAnimation: React.FC<FloralAnimationProps> = ({ count = 20 }) => {
       rotation: Math.random() * 360,
       scale: Math.random() * 0.9 + 0.2, // Flores más pequeñas para no sobrecargar visualmente
       delay: Math.random() * 2,
-      duration: Math.random() * 5 + 5,
+      duration: Math.random() * 10 + 5,
       type: Math.floor(Math.random() * 5),
     }))
 

@@ -16,7 +16,7 @@ const WelcomeScreen: React.FC = () => {
       <FloralBorder />
 
       {/* Animación de flores flotantes */}
-      <FloralAnimation count={25} />
+      <FloralAnimation count={30} />
 
       <motion.h1
         className={styles.title}
