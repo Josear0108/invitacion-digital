@@ -29,7 +29,7 @@ const MapDialog: React.FC = () => {
       </div>
 
       <div className={styles.mapActions}>
-        <button className={styles.googleMapsButton} onClick={() => window.open("https://maps.google.com", "_blank")}>
+        <button className={styles.googleMapsButton} onClick={() => window.open("https://maps.app.goo.gl/9Hoq27dEcReLrJtR9", "_blank")}>
           Abrir en Google Maps
         </button>
 
