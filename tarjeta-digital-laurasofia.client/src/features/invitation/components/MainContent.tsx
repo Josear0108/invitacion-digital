@@ -1,4 +1,7 @@
+"use client"
+
 import type React from "react"
+import { motion } from "framer-motion"
 import type { Photo, TimelineEvent } from "../../../types/invitation"
 import HeroSection from "./HeroSection"
 import PhotoCarousel from "./PhotoCarousel"
@@ -19,13 +22,23 @@ interface MainContentProps {
 
 const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) => {
   return (
-    <div className={styles.mainContent}>
+    <motion.div
+      className={styles.mainContent}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1 }}
+    >
       <ParallaxBackground />
       <MusicControl />
 
       <HeroSection />
 
-      <div className={styles.contentContainer}>
+      <motion.div
+        className={styles.contentContainer}
+        initial={{ y: 50, opacity: 0 }}
+        animate={{ y: 0, opacity: 1 }}
+        transition={{ delay: 0.5, duration: 0.8 }}
+      >
         <PhotoCarousel photos={photos} />
 
         <div className={styles.poeticIntro}>
@@ -46,8 +59,8 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
         <ActionButtons />
 
         <Footer />
-      </div>
-    </div>
+      </motion.div>
+    </motion.div>
   )
 }
 

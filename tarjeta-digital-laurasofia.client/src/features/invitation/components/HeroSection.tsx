@@ -1,6 +1,7 @@
 "use client"
 
 import type React from "react"
+import { motion } from "framer-motion"
 import ParallaxSection from "../../../components/ParallaxSection"
 import styles from "../../../styles/HeroSection.module.css"
 
@@ -13,23 +14,60 @@ const HeroSection: React.FC = () => {
   }
 
   return (
-    <section className={styles.heroSection}>
+    <motion.section
+      className={styles.heroSection}
+      initial={{ opacity: 0 }}
+      animate={{ opacity: 1 }}
+      transition={{ duration: 1.2 }}
+    >
       <ParallaxSection speed={0.2} direction="up" className={styles.titleContainer}>
-        <h1 className={styles.title}>Angelly</h1>
+        <motion.h1
+          className={styles.title}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.3, duration: 0.8 }}
+        >
+          Laura Sofía
+        </motion.h1>
       </ParallaxSection>
 
       <ParallaxSection speed={0.4} direction="up" className={styles.subtitleContainer}>
-        <h2 className={styles.subtitle}>Mis XV Años</h2>
+        <motion.h2
+          className={styles.subtitle}
+          initial={{ opacity: 0, y: 30 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.6, duration: 0.8 }}
+        >
+          Mis XV Años
+        </motion.h2>
       </ParallaxSection>
 
       <ParallaxSection speed={0.6} direction="up" className={styles.introContainer}>
-        <p className={styles.intro}>
+        <motion.p
+          className={styles.intro}
+          initial={{ opacity: 0 }}
+          animate={{ opacity: 1 }}
+          transition={{ delay: 0.9, duration: 0.8 }}
+        >
           Hace 15 veranos llegue a este mundo, en un día lleno de sol, para darle a mi familia jubilo y llenarlos de
           amor.
-        </p>
+        </motion.p>
       </ParallaxSection>
 
-      <div className={styles.scrollIndicator} onClick={scrollToContent}>
+      <motion.div
+        className={styles.scrollIndicator}
+        onClick={scrollToContent}
+        initial={{ opacity: 0 }}
+        animate={{
+          opacity: [0.6, 1, 0.6],
+          y: [0, 10, 0],
+        }}
+        transition={{
+          delay: 1.5,
+          duration: 2,
+          repeat: Number.POSITIVE_INFINITY,
+        }}
+      >
         <svg
           xmlns="http://www.w3.org/2000/svg"
           viewBox="0 0 24 24"
@@ -41,8 +79,8 @@ const HeroSection: React.FC = () => {
         >
           <polyline points="6 9 12 15 18 9"></polyline>
         </svg>
-      </div>
-    </section>
+      </motion.div>
+    </motion.section>
   )
 }
 

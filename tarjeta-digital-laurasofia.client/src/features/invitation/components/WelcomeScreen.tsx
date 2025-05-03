@@ -9,7 +9,7 @@ const WelcomeScreen: React.FC = () => {
   const { startExperience } = useInvitation()
 
   return (
-    <div className={styles.welcomeScreen}>
+    <motion.div className={styles.welcomeScreen} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
       <motion.h1
         className={styles.title}
         initial={{ opacity: 0, y: -20 }}
@@ -70,7 +70,7 @@ const WelcomeScreen: React.FC = () => {
       >
         Mis XV Años
       </motion.h3>
-    </div>
+    </motion.div>
   )
 }
 

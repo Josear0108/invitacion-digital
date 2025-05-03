@@ -30,7 +30,11 @@ const InvitationPage: React.FC = () => {
       <audio id="background-music" loop src={`${baseUrl}assets/quinceanera-music.mp3`} />
 
       <AnimatePresence mode="wait">
-        {!started ? <WelcomeScreen /> : <MainContent photos={photos} itineraryEvents={itineraryEvents} />}
+        {!started ? (
+          <WelcomeScreen key="welcome" />
+        ) : (
+          <MainContent key="main" photos={photos} itineraryEvents={itineraryEvents} />
+        )}
       </AnimatePresence>
 
       {confirmOpen && <ConfirmationDialog />}
