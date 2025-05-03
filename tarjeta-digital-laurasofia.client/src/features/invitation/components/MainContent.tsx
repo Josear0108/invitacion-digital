@@ -14,6 +14,7 @@ import MusicControl from "./MusicControl"
 import Footer from "./Footer"
 import ParallaxBackground from "../../../components/ParallaxBackground"
 import styles from "../../../styles/MainContent.module.css"
+import FloralAnimation from "./FloralAnimation"
 
 interface MainContentProps {
   photos: Photo[]
@@ -21,6 +22,9 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) => {
+  // Colores para las flores - tonos rosados para quinceañera
+  const flowerColors = ["#FFD1DC", "#FFACC7", "#FF85A1", "#FF5A8A"]
+
   return (
     <motion.div
       className={styles.mainContent}
@@ -30,6 +34,9 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
     >
       <ParallaxBackground />
       <MusicControl />
+
+      {/* Menos flores en el contenido principal para no distraer */}
+      <FloralAnimation count={10} colors={flowerColors} />
 
       <HeroSection />
 
@@ -43,7 +50,8 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
 
         <div className={styles.poeticIntro}>
           <p>
-          Hay momentos inolvidables que se atesoran en el corazon para siempre.Por esta razón quiero que compartas conmigo este día tan especial.
+            El tiempo ha pasado y ha llegado el día de la celebración, por eso te invito a que compartas conmigo, llenos
+            de emoción.
           </p>
         </div>
 
@@ -64,4 +72,3 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
 }
 
 export default MainContent
-  
