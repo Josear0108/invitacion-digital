@@ -2,6 +2,7 @@
 
 import type React from "react"
 import { useEffect } from "react"
+import { AnimatePresence } from "framer-motion"
 import { useInvitation } from "../../context/InvitationContext"
 import WelcomeScreen from "./components/WelcomeScreen"
 import MainContent from "./components/MainContent"
@@ -16,14 +17,21 @@ const InvitationPage: React.FC = () => {
   useEffect(() => {
     // Preload audio
     const audio = document.getElementById("background-music") as HTMLAudioElement
-    audio.load()
+    if (audio) {
+      audio.load()
+    }
   }, [])
+
+  // Obtener la base URL para GitHub Pages
+  const baseUrl = import.meta.env.BASE_URL || "/"
 
   return (
     <div className={styles.invitationPage}>
-      <audio id="background-music" loop src="/assets/quinceanera-music.mp3" />
+      <audio id="background-music" loop src={`${baseUrl}assets/quinceanera-music.mp3`} />
 
-      {!started ? <WelcomeScreen /> : <MainContent photos={photos} itineraryEvents={itineraryEvents} />}
+      <AnimatePresence mode="wait">
+        {!started ? <WelcomeScreen /> : <MainContent photos={photos} itineraryEvents={itineraryEvents} />}
+      </AnimatePresence>
 
       {confirmOpen && <ConfirmationDialog />}
       {mapOpen && <MapDialog />}
