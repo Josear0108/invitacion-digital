@@ -5,31 +5,27 @@
   flex-direction: column;
   align-items: center;
   justify-content: center;
-  background-color: var(--color-white);
+  background-color: var(--color-white, white);
   z-index: 50;
-  animation: fadeIn var(--transition-slow) ease-in-out;
 }
 
 .title {
-  font-size: var(--font-size-4xl);
-  color: var(--color-emerald-600);
-  margin-bottom: var(--spacing-16);
+  font-size: 2.25rem;
+  color: var(--color-emerald-600, #059669);
+  margin-bottom: 4rem;
   font-weight: 300;
-  animation: slideUp var(--transition-normal) ease-out 0.5s both;
 }
 
 .playButtonContainer {
   position: relative;
-  animation: slideUp var(--transition-normal) ease-out 1s both;
 }
 
 .playButtonGlow {
   position: absolute;
   inset: 0;
-  background-color: var(--color-emerald-500);
-  border-radius: var(--border-radius-full);
+  background-color: var(--color-emerald-500, #10b981);
+  border-radius: 9999px;
   opacity: 0.2;
-  animation: pulse 2s infinite ease-in-out;
 }
 
 .playButton {
@@ -40,16 +36,16 @@
   display: flex;
   align-items: center;
   justify-content: center;
-  border-radius: var(--border-radius-full);
-  background-color: var(--color-emerald-600);
-  color: var(--color-white);
+  border-radius: 9999px;
+  background-color: var(--color-emerald-600, #059669);
+  color: var(--color-white, white);
   border: none;
   cursor: pointer;
-  transition: background-color var(--transition-normal) var(--transition-timing);
+  transition: background-color 0.3s ease;
 }
 
 .playButton:hover {
-  background-color: var(--color-emerald-700);
+  background-color: var(--color-emerald-700, #047857);
 }
 
 .playIcon {
@@ -59,32 +55,30 @@
 }
 
 .name {
-  font-size: var(--font-size-7xl);
+  font-size: 4.5rem;
   font-weight: 300;
-  color: var(--color-emerald-600);
-  margin-top: var(--spacing-16);
-  margin-bottom: var(--spacing-4);
-  animation: fadeIn var(--transition-normal) ease-out 1.5s both;
+  color: var(--color-emerald-600, #059669);
+  margin-top: 4rem;
+  margin-bottom: 1rem;
 }
 
 .subtitle {
-  font-size: var(--font-size-4xl);
+  font-size: 2.25rem;
   font-weight: 300;
-  color: var(--color-emerald-500);
-  margin-bottom: var(--spacing-8);
-  animation: fadeIn var(--transition-normal) ease-out 2s both;
+  color: var(--color-emerald-500, #10b981);
+  margin-bottom: 2rem;
 }
 
 @media (max-width: 768px) {
   .title {
-    font-size: var(--font-size-3xl);
+    font-size: 1.875rem;
   }
 
   .name {
-    font-size: var(--font-size-5xl);
+    font-size: 3rem;
   }
 
   .subtitle {
-    font-size: var(--font-size-2xl);
+    font-size: 1.5rem;
   }
 }
