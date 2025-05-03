@@ -68,7 +68,7 @@ const FloralAnimation: React.FC<FloralAnimationProps> = ({ count = 20 }) => {
           }}
         >
           <img
-            src={`/assets/flower-${flower.type + 1}.png`}
+            src={`/invitacion-digital/assets/small-flower.png`}
             alt="Flor decorativa"
             className={styles.flowerImage}
           />

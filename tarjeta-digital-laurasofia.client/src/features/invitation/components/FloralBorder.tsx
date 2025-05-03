@@ -14,7 +14,7 @@ const FloralBorder: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 0.5 }}
       >
-        <img src="/invitacion-digital/assets/corner-flower.jpg" alt="Decoración floral" />
+        <img src="/invitacion-digital/assets/corner-flower.png" alt="Decoración floral" />
       </motion.div>
 
       {/* Esquina superior derecha */}
@@ -44,11 +44,11 @@ const FloralBorder: React.FC = () => {
         animate={{ opacity: 1, scale: 1 }}
         transition={{ duration: 1, delay: 1.1 }}
       >
-        <img src="/invitacion-digital/assets/corner-flower.jpg" alt="Decoración floral" />
+        <img src="/invitacion-digital/assets/abajo-derecho.png" alt="Decoración floral" />
       </motion.div>
 
       {/* Líneas decorativas con flores pequeñas */}
-      <div className={styles.decorativeLine}>
+      {/* <div className={styles.decorativeLine}>
         {[...Array(5)].map((_, index) => (
           <motion.div
             key={`top-${index}`}
@@ -58,7 +58,7 @@ const FloralBorder: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.3 + index * 0.1 }}
           >
-            <img src="/invitacion-digital/assets/small-flower.jpg" alt="Flor pequeña" />
+            <img src="/invitacion-digital/assets/small-flowe.png" alt="Flor pequeña" />
           </motion.div>
         ))}
       </div>
@@ -73,10 +73,10 @@ const FloralBorder: React.FC = () => {
             animate={{ opacity: 1, scale: 1 }}
             transition={{ duration: 0.5, delay: 1.3 + index * 0.1 }}
           >
-            <img src="/invitacion-digital/assets/small-flower.jpg" alt="Flor pequeña" />
+            <img src="/invitacion-digital/assets/small-flowes.png" alt="Flor pequeña" />
           </motion.div>
         ))}
-      </div>
+      </div> */}
     </div>
   )
 }
