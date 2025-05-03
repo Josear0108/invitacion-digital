@@ -22,12 +22,9 @@ const InvitationPage: React.FC = () => {
     }
   }, [])
 
-  // Obtener la base URL para GitHub Pages
-  const baseUrl = import.meta.env.BASE_URL || "/"
-
   return (
     <div className={styles.invitationPage}>
-      <audio id="background-music" loop src={`${baseUrl}assets/quinceanera-music.mp3`} />
+      <audio id="background-music" loop src={`/invitacion-digital/audio/music.mp3`} />
 
       <AnimatePresence mode="wait">
         {!started ? (
