@@ -49,8 +49,7 @@ const HeroSection: React.FC = () => {
           animate={{ opacity: 1 }}
           transition={{ delay: 0.9, duration: 0.8 }}
         >
-          Hace 15 veranos llegue a este mundo, en un día lleno de sol, para darle a mi familia jubilo y llenarlos de
-          amor.
+          Hace quince años nació una hermosa niña, enviada por Dios para ser criada y formada como el más grande tesoro. Hay momentos en la vida que imaginamos, soñamos y esperamos. Uno de esos momentos ha llegado.
         </motion.p>
       </ParallaxSection>
 

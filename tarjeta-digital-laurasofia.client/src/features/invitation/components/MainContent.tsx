@@ -43,8 +43,7 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
 
         <div className={styles.poeticIntro}>
           <p>
-            El tiempo ha pasado y ha llegado el día de la celebración, por eso te invito a que compartas conmigo, llenos
-            de emoción.
+          Hay momentos inolvidables que se atesoran en el corazon para siempre.Por esta razón quiero que compartas conmigo este día tan especial.
           </p>
         </div>
 

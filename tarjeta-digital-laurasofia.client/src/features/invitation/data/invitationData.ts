@@ -1,10 +1,11 @@
 import type { Photo, TimelineEvent } from "../../../types/invitation"
 
 export const photos: Photo[] = [
-  { src: "/assets/placeholder1.jpg", alt: "Angelly 1" },
-  { src: "/assets/placeholder2.jpg", alt: "Angelly 2" },
-  { src: "/assets/placeholder3.jpg", alt: "Angelly 3" },
-  { src: "/assets/placeholder4.jpg", alt: "Angelly 4" },
+  { src: "/invitacion-digital/assets/foto-4.jpg", alt: "Angelly 1" },
+  { src: "/invitacion-digital/assets/foto-1.jpg", alt: "Angelly 2" },
+  { src: "/invitacion-digital/assets/foto-2.jpg", alt: "Angelly 3" },
+  { src: "/invitacion-digital/assets/foto-3.jpg", alt: "Angelly 4" },
+  { src: "/invitacion-digital/assets/foto-5.jpg", alt: "Angelly 4" },
 ]
 
 export const itineraryEvents: TimelineEvent[] = [
