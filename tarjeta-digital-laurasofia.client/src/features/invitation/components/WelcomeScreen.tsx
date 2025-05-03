@@ -4,29 +4,19 @@ import type React from "react"
 import { motion } from "framer-motion"
 import { useInvitation } from "../../../context/InvitationContext"
 import styles from "../../../styles/WelcomeScreen.module.css"
-import FloralBackground from "./FloralBackground"
-import DecorativeBorder from "./DecorativeBorder"
 import FloralAnimation from "./FloralAnimation"
+import FloralBorder from "./FloralBorder"
 
 const WelcomeScreen: React.FC = () => {
   const { startExperience } = useInvitation()
 
-  // Colores para las flores - tonos rosados para quinceañera
-  const flowerColors = ["#FFD1DC", "#FFACC7", "#FF85A1", "#FF5A8A"]
-
-  // Color principal para bordes decorativos
-  const mainColor = "#FF85A1" // Rosa medio
-
   return (
     <motion.div className={styles.welcomeScreen} exit={{ opacity: 0 }} transition={{ duration: 0.8 }}>
-      {/* Fondo con patrones florales sutiles */}
-      <FloralBackground color="rgba(255, 133, 161, 0.05)" />
-
-      {/* Borde decorativo */}
-      <DecorativeBorder color={mainColor} />
+      {/* Borde floral decorativo */}
+      <FloralBorder />
 
       {/* Animación de flores flotantes */}
-      <FloralAnimation count={25} colors={flowerColors} />
+      <FloralAnimation count={25} />
 
       <motion.h1
         className={styles.title}

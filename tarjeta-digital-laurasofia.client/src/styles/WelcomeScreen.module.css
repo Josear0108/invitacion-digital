@@ -55,6 +55,7 @@
 }
 
 .name {
+  font-family: 'Great Vibes', cursive;
   font-size: 4.5rem;
   font-weight: 300;
   color: var(--color-emerald-600, #059669);
@@ -63,6 +64,7 @@
 }
 
 .subtitle {
+  font-family: 'Playfair Display', serif;
   font-size: 2.25rem;
   font-weight: 300;
   color: var(--color-emerald-500, #10b981);

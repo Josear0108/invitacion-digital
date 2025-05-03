@@ -1,0 +1,45 @@
+.gifContainer {
+    position: fixed;
+    z-index: 5;
+    pointer-events: none;
+  }
+  
+  .floralGif {
+    width: 150px;
+    height: 150px;
+    object-fit: contain;
+  }
+  
+  .topLeft {
+    top: 20px;
+    left: 20px;
+  }
+  
+  .topRight {
+    top: 20px;
+    right: 20px;
+  }
+  
+  .bottomLeft {
+    bottom: 20px;
+    left: 20px;
+  }
+  
+  .bottomRight {
+    bottom: 20px;
+    right: 20px;
+  }
+  
+  .center {
+    top: 50%;
+    left: 50%;
+    transform: translate(-50%, -50%);
+  }
+  
+  @media (max-width: 768px) {
+    .floralGif {
+      width: 100px;
+      height: 100px;
+    }
+  }
+  

@@ -6,7 +6,7 @@ import FloralDivider from "./FloralDivider"
 const EventDetails: React.FC = () => {
   return (
     <>
-      <FloralDivider color="#FF85A1" />
+      <FloralDivider />
 
       <ParallaxSection speed={0.5} direction="up" className={styles.eventDetailsContainer}>
         <div className={styles.eventDetails}>
@@ -71,7 +71,7 @@ const EventDetails: React.FC = () => {
         </div>
       </ParallaxSection>
 
-      <FloralDivider color="#FF85A1" />
+      <FloralDivider />
     </>
   )
 }

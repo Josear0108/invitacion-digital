@@ -22,9 +22,6 @@ interface MainContentProps {
 }
 
 const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) => {
-  // Colores para las flores - tonos rosados para quinceañera
-  const flowerColors = ["#FFD1DC", "#FFACC7", "#FF85A1", "#FF5A8A"]
-
   return (
     <motion.div
       className={styles.mainContent}
@@ -36,7 +33,7 @@ const MainContent: React.FC<MainContentProps> = ({ photos, itineraryEvents }) =>
       <MusicControl />
 
       {/* Menos flores en el contenido principal para no distraer */}
-      <FloralAnimation count={10} colors={flowerColors} />
+      <FloralAnimation count={10} />
 
       <HeroSection />
 

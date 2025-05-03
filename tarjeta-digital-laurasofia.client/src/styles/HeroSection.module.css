@@ -14,6 +14,7 @@
 }
 
 .title {
+  font-family: 'Great Vibes', cursive;
   font-size: var(--font-size-6xl);
   font-weight: 300;
   color: var(--color-emerald-600);
@@ -22,6 +23,7 @@
 }
 
 .subtitleContainer {
+  font-family: 'Playfair Display', serif;
   z-index: 10;
   text-align: center;
 }
@@ -34,6 +36,7 @@
 }
 
 .introContainer {
+  font-family: 'Cormorant Garamond', serif;
   z-index: 10;
   margin-top: var(--spacing-8);
   text-align: center;
