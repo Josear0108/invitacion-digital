@@ -1,0 +1,71 @@
+:root {
+    --emerald-600: #047857;
+    --emerald-700: #065f46;
+    --emerald-50:  #ecfdf5;
+    --emerald-200: #a7f3d0;
+  }
+  
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 1rem;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 1rem;
+    box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  }
+  
+  .title {
+    font-size: 1.5rem;      /* text-2xl */
+    font-weight: 300;       /* font-light */
+    color: var(--emerald-600);
+    margin-bottom: 1rem;    /* mb-4 */
+  }
+  
+  .units {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    gap: 1rem;              /* gap-4 */
+  }
+  
+  .intro {
+    margin-top: 1rem;       /* mt-4 */
+    color: var(--emerald-700);
+    font-style: italic;
+    text-align: center;
+  }
+  
+  .timeUnit {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  .timeUnitBox {
+    width: 5rem;            /* w-20 */
+    height: 5rem;           /* h-20 */
+    background: var(--emerald-50);
+    border: 1px solid var(--emerald-200);
+    border-radius: 0.5rem;  /* rounded-lg */
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    box-shadow: 0 2px 6px rgba(0,0,0,0.1); /* shadow-md */
+  }
+  
+  .timeValue {
+    font-size: 1.875rem;     /* text-3xl */
+    font-weight: 700;        /* font-bold */
+    color: var(--emerald-600);
+  }
+  
+  .timeLabel {
+    font-size: 0.875rem;     /* text-sm */
+    color: var(--emerald-700);
+    margin-top: 0.5rem;      /* mt-2 */
+    text-transform: uppercase;
+    letter-spacing: 0.05em;
+  }
+  

@@ -2,93 +2,78 @@
 
 import { useState, useEffect } from "react"
 import { motion } from "framer-motion"
+import styles from "../../../styles/Countdown.module.css"
 
 interface CountdownTimerProps {
   targetDate: Date
   className?: string
 }
 
-interface TimeLeft {
-  days: number
-  hours: number
-  minutes: number
-  seconds: number
-}
+interface TimeLeft { days: number; hours: number; minutes: number; seconds: number }
 
 export function CountdownTimer({ targetDate, className = "" }: CountdownTimerProps) {
-  const [timeLeft, setTimeLeft] = useState<TimeLeft>({
-    days: 0,
-    hours: 0,
-    minutes: 0,
-    seconds: 0,
-  })
+  const [timeLeft, setTimeLeft] = useState<TimeLeft>({ days:0,hours:0,minutes:0,seconds:0 })
 
   useEffect(() => {
-    const calculateTimeLeft = () => {
-      const difference = targetDate.getTime() - new Date().getTime()
-
-      if (difference > 0) {
+    const calculate = () => {
+      const diff = targetDate.getTime() - Date.now()
+      if (diff > 0) {
         setTimeLeft({
-          days: Math.floor(difference / (1000 * 60 * 60 * 24)),
-          hours: Math.floor((difference / (1000 * 60 * 60)) % 24),
-          minutes: Math.floor((difference / 1000 / 60) % 60),
-          seconds: Math.floor((difference / 1000) % 60),
+          days:   Math.floor(diff / 86400000),
+          hours:  Math.floor((diff / 3600000) % 24),
+          minutes: Math.floor((diff / 60000) % 60),
+          seconds: Math.floor((diff / 1000) % 60),
         })
       } else {
-        // Si ya pasó la fecha, mostrar todos los valores en cero
-        setTimeLeft({ days: 0, hours: 0, minutes: 0, seconds: 0 })
+        setTimeLeft({ days:0,hours:0,minutes:0,seconds:0 })
       }
     }
 
-    // Calcular inmediatamente
-    calculateTimeLeft()
-
-    // Actualizar cada segundo solo si la fecha aún no ha pasado
-    const currentTime = new Date().getTime()
-    if (targetDate.getTime() > currentTime) {
-      const timer = setInterval(calculateTimeLeft, 1000)
-      // Limpiar intervalo al desmontar
+    calculate()
+    if (targetDate.getTime() > Date.now()) {
+      const timer = setInterval(calculate, 1000)
       return () => clearInterval(timer)
     }
   }, [targetDate])
 
   return (
-    <div className={`flex flex-col items-center ${className}`}>
-      <h3 className="text-2xl font-light text-emerald-600 mb-4">Faltan</h3>
-
-      <div className="flex flex-wrap justify-center gap-4">
-        <TimeUnit value={timeLeft.days} label="Días" />
-        <TimeUnit value={timeLeft.hours} label="Horas" />
+    <div className={`${styles.countdown} ${className}`}>
+      <h3 className={styles.title}>Faltan</h3>
+      <div className={styles.units}>
+        <TimeUnit value={timeLeft.days}    label="Días"    />
+        <TimeUnit value={timeLeft.hours}   label="Horas"   />
         <TimeUnit value={timeLeft.minutes} label="Minutos" />
-        <TimeUnit value={timeLeft.seconds} label="Segundos" />
+        <TimeUnit value={timeLeft.seconds} label="Segundos"/>
       </div>
-
-      <p className="mt-4 text-emerald-700 italic">para celebrar juntos este día especial</p>
+      <p className={styles.intro}>para celebrar juntos este día especial</p>
     </div>
   )
 }
 
-interface TimeUnitProps {
-  value: number
-  label: string
-}
+interface TimeUnitProps { value: number; label: string }
 
 function TimeUnit({ value, label }: TimeUnitProps) {
   return (
     <motion.div
-      className="flex flex-col items-center"
+      className={styles.timeUnit}
       initial={{ scale: 0.9, opacity: 0 }}
       animate={{ scale: 1, opacity: 1 }}
       transition={{ duration: 0.5 }}
     >
       <motion.div
-        className="w-20 h-20 bg-emerald-50 border border-emerald-200 rounded-lg flex items-center justify-center shadow-md"
+        className={styles.timeUnitBox}
         animate={{ scale: [1, 1.05, 1] }}
-        transition={{ duration: 0.5, repeat: value === 0 ? 0 : Number.POSITIVE_INFINITY, repeatDelay: 10 }}
+        transition={{
+          duration: 0.5,
+          repeat: value === 0 ? 0 : Infinity,
+          repeatDelay: 1,
+        }}
       >
-        <span className="text-3xl font-bold text-emerald-600">{value.toString().padStart(2, "0")}</span>
+        <span className={styles.timeValue}>
+          {value.toString().padStart(2, "0")}
+        </span>
       </motion.div>
-      <span className="text-sm text-emerald-700 mt-2">{label}</span>
+      <span className={styles.timeLabel}>{label}</span>
     </motion.div>
   )
 }
