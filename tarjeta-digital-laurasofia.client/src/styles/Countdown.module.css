@@ -42,7 +42,6 @@
     width: 100%;
     aspect-ratio: 1;
     max-width: 100px;            /* opcional tope */
-    background: var(--emerald-50);
     border: 2px solid var(--emerald-200);
     border-radius: 0.75rem;
     display: flex;
