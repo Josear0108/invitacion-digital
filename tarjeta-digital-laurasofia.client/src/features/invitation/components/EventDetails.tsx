@@ -26,7 +26,7 @@ const EventDetails: React.FC = () => {
           <CountdownTimer targetDate={targetDate} />
         </motion.div>
 
-        <div className={styles.eventDetails}>
+        {/* <div className={styles.eventDetails}>
           <div className={styles.eventDetail}>
             <div className={styles.eventDetailIcon}>
               <svg
@@ -85,7 +85,7 @@ const EventDetails: React.FC = () => {
             <h3>Lugar</h3>
             <p>Finca Pórtico Torcoroma</p>
           </div>
-        </div>
+        </div> */}
       </ParallaxSection>
 
       <FloralDivider />
