@@ -3,10 +3,10 @@
   display: flex;
   flex-direction: column;
   align-items: center;
-  background: rgba(255,255,255,0.3);
+  background: rgba(255, 255, 255, 0.3);
   backdrop-filter: blur(6px);
   border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0,0,0,0.08);
+  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
   padding: 1.5rem;
   max-width: 480px;
   margin: 0 auto;
@@ -14,31 +14,26 @@
 
 /* Título “Faltan” */
 .title {
-  font-family: 'Great Vibes', cursive;
+  font-family: "Great Vibes", cursive;
   font-size: 2.5rem;
   color: var(--emerald-600);
   margin-bottom: 1rem;
 }
 
-/* Fila de cajitas, siempre en una línea */
 .units {
   display: flex;
-  flex-wrap: nowrap;
-  justify-content: center;
-  gap: 1rem;
+  flex-wrap: wrap; /* permite varias filas si es necesario */
+  justify-content: center; /* centra los items */
+  gap: 1rem; /* espacio uniforme */
   width: 100%;
-  overflow-x: auto;    /* si es muy estrecho, permite swipe */
-  padding-bottom: 0.5rem;
-  /* opcional: esconder scrollbar en WebKit 
-  &::-webkit-scrollbar { display: none; } */
+  margin: 0 auto;
+  overflow: visible; /* quita overflow-x */
 }
 
 /* Cada cajita de tiempo */
 .timeUnit {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  flex: 0 0 auto;
+  flex: 1 1 calc(25% - 1rem);
+  min-width: 120px; /* asegura un ancho razonable */
 }
 
 /* La caja numerada */
@@ -54,7 +49,7 @@
 
 /* El número grande */
 .timeValue {
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1.75rem;
   font-weight: 700;
   color: var(--emerald-600);
@@ -62,7 +57,7 @@
 
 /* La etiqueta (DÍAS, HORAS…) */
 .timeLabel {
-  font-family: 'Playfair Display', serif;
+  font-family: "Playfair Display", serif;
   font-size: 0.875rem;
   color: var(--emerald-700);
   text-transform: uppercase;
@@ -73,9 +68,15 @@
 /* Texto inferior */
 .intro {
   margin-top: 1rem;
-  font-family: 'Cormorant Garamond', serif;
+  font-family: "Cormorant Garamond", serif;
   font-size: 1rem;
   font-style: italic;
   color: var(--emerald-700);
   text-align: center;
 }
+
+@media (max-width: 480px) {
+    .timeUnit {
+      flex: 1 1 calc(50% - 1rem);  /* dos por fila */
+    }
+  }
