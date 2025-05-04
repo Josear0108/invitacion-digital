@@ -1,7 +1,7 @@
 "use client"
 
 import type React from "react"
-import { useState } from "react"
+import { useEffect, useState } from "react"
 import type { Photo } from "../../../types/invitation"
 import styles from "../../../styles/PhotoCarousel.module.css"
 
@@ -11,6 +11,16 @@ interface PhotoCarouselProps {
 
 const PhotoCarousel: React.FC<PhotoCarouselProps> = ({ photos }) => {
   const [currentIndex, setCurrentIndex] = useState(0)
+  
+  useEffect(() => {
+    const interval = setInterval(() => {
+      setCurrentIndex((prevIndex) =>
+        prevIndex === photos.length - 1 ? 0 : prevIndex + 1
+      );
+    }, 5000); // Cambia cada 5 segundos
+  
+    return () => clearInterval(interval); // Limpieza cuando el componente se desmonta
+  }, [photos.length]);
 
   const goToPrevious = () => {
     const isFirstSlide = currentIndex === 0
