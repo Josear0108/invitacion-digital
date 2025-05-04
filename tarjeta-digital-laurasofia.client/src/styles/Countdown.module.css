@@ -1,82 +1,81 @@
-/* Contenedor principal glassmorphic */
-.countdown {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background: rgba(255, 255, 255, 0.3);
-  backdrop-filter: blur(6px);
-  border-radius: 1rem;
-  box-shadow: 0 4px 12px rgba(0, 0, 0, 0.08);
-  padding: 1.5rem;
-  max-width: 480px;
-  margin: 0 auto;
-}
-
-/* Título “Faltan” */
-.title {
-  font-family: "Great Vibes", cursive;
-  font-size: 2.5rem;
-  color: var(--emerald-600);
-  margin-bottom: 1rem;
-}
-
-.units {
-  display: flex;
-  flex-wrap: wrap; /* permite varias filas si es necesario */
-  justify-content: center; /* centra los items */
-  gap: 1rem; /* espacio uniforme */
-  width: 100%;
-  margin: 0 auto;
-  overflow: visible; /* quita overflow-x */
-}
-
-/* Cada cajita de tiempo */
-.timeUnit {
-  flex: 1 1 calc(25% - 1rem);
-  min-width: 120px; /* asegura un ancho razonable */
-}
-
-/* La caja numerada */
-.timeUnitBox {
-  width: 4.5rem;
-  height: 4.5rem;
-  border: 2px solid var(--emerald-200);
-  border-radius: 0.75rem;
-  display: flex;
-  align-items: center;
-  justify-content: center;
-}
-
-/* El número grande */
-.timeValue {
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1.75rem;
-  font-weight: 700;
-  color: var(--emerald-600);
-}
-
-/* La etiqueta (DÍAS, HORAS…) */
-.timeLabel {
-  font-family: "Playfair Display", serif;
-  font-size: 0.875rem;
-  color: var(--emerald-700);
-  text-transform: uppercase;
-  margin-top: 0.25rem;
-  letter-spacing: 0.05em;
-}
-
-/* Texto inferior */
-.intro {
-  margin-top: 1rem;
-  font-family: "Cormorant Garamond", serif;
-  font-size: 1rem;
-  font-style: italic;
-  color: var(--emerald-700);
-  text-align: center;
-}
-
-@media (max-width: 480px) {
-    .timeUnit {
-      flex: 1 1 calc(50% - 1rem);  /* dos por fila */
-    }
+:root {
+    --emerald-50:  #ecfdf5;
+    --emerald-200: #a7f3d0;
+    --emerald-600: #047857;
+    --emerald-700: #065f46;
   }
+  
+  /* Contenedor glassmorphic */
+  .countdown {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    background: rgba(255,255,255,0.3);
+    backdrop-filter: blur(6px);
+    border-radius: 1rem;
+    padding: 1.5rem;
+    max-width: 480px;
+    margin: 0 auto;
+  }
+  
+  /* Unidad de tiempo (día, hora…) */
+  .units {
+    display: flex;
+    flex-wrap: nowrap;           /* nunca bajan de línea */
+    justify-content: space-between;
+    width: 100%;
+    gap: 0.5rem;
+    overflow: hidden;            /* aseguramos sin scroll */
+  }
+  
+  /* Cada cajita puede comprimirse */
+  .timeUnit {
+    flex: 1;                     /* ocupan espacio igual */
+    min-width: 0;                /* permiten contraerse */
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+  }
+  
+  /* Caja del número, ratio 1:1 */
+  .timeUnitBox {
+    width: 100%;
+    aspect-ratio: 1;
+    max-width: 100px;            /* opcional tope */
+    background: var(--emerald-50);
+    border: 2px solid var(--emerald-200);
+    border-radius: 0.75rem;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  }
+  
+  /* Número responsivo */
+  .timeValue {
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(1.2rem, 6vw, 1.75rem);
+    font-weight: 700;
+    color: var(--emerald-600);
+    line-height: 1;
+  }
+  
+  /* Etiqueta responsiva */
+  .timeLabel {
+    font-family: 'Playfair Display', serif;
+    font-size: clamp(0.65rem, 3vw, 0.875rem);
+    color: var(--emerald-700);
+    text-transform: uppercase;
+    margin-top: 0.25rem;
+    letter-spacing: 0.05em;
+  }
+  
+  /* Intro (“para celebrar…”) */
+  .intro {
+    margin-top: 1rem;
+    font-family: 'Cormorant Garamond', serif;
+    font-size: clamp(0.9rem, 3.5vw, 1rem);
+    font-style: italic;
+    color: var(--emerald-700);
+    text-align: center;
+  }
+  
