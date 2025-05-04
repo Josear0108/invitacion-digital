@@ -1,14 +1,31 @@
-import type React from "react"
-import ParallaxSection from "../../../components/ParallaxSection"
-import styles from "../../../styles/EventDetails.module.css"
-import FloralDivider from "./FloralDivider"
+import type React from "react";
+import ParallaxSection from "../../../components/ParallaxSection";
+import styles from "../../../styles/EventDetails.module.css";
+import FloralDivider from "./FloralDivider";
+import { motion } from "framer-motion";
+import { CountdownTimer } from "./Countdown-timer";
 
 const EventDetails: React.FC = () => {
+  const currentYear = new Date().getFullYear()
+  const targetDate = new Date(currentYear, 7, 17, 18, 0, 0) // Año, mes (7=agosto), día, hora (18=6PM), minutos, segundos
   return (
     <>
       <FloralDivider />
 
-      <ParallaxSection speed={0.5} direction="up" className={styles.eventDetailsContainer}>
+      <ParallaxSection
+        speed={0.5}
+        direction="up"
+        className={styles.eventDetailsContainer}
+      >
+        <motion.div
+          initial={{ opacity: 0, y: 50 }}
+          animate={{ opacity: 1, y: 0 }}
+          transition={{ delay: 0.2, duration: 0.8 }}
+          className="p-6 bg-white rounded-lg shadow-sm"
+        >
+          <CountdownTimer targetDate={targetDate} />
+        </motion.div>
+
         <div className={styles.eventDetails}>
           <div className={styles.eventDetail}>
             <div className={styles.eventDetailIcon}>
@@ -73,7 +90,7 @@ const EventDetails: React.FC = () => {
 
       <FloralDivider />
     </>
-  )
-}
+  );
+};
 
-export default EventDetails
+export default EventDetails;
