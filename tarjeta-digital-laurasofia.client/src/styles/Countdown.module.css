@@ -17,6 +17,13 @@
     max-width: 480px;
     margin: 0 auto;
   }
+
+  .title {
+    font-family: 'Great Vibes', cursive;
+    font-size: 2.5rem;
+    color: var(--emerald-600);
+    margin-bottom: 1rem;
+  }
   
   /* Unidad de tiempo (día, hora…) */
   .units {
